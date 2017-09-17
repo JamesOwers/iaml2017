@@ -17,6 +17,13 @@ Please read and heed any warnings *and especially errors* you may encounter. We
 are on standby in the labs to help if required.
 
 ## 1. Check your available space
+Firstly, please note that your space on DICE is allocated dynamically. If you are
+having problems it may be because you were using new space faster than it could
+be allocated to you!
+
+All DICE users **registered** for IAML will automatically be allocated **20GB**
+extra space over their default space values. **Please register for the course
+ASAP to get this space**.
 1. Check how much space you have on DICE. **You will need at least 4.5GB**.
     1. `freespace`
     1. If you don't have enough space, follow the instructions on [this page](
@@ -38,7 +45,8 @@ are on standby in the labs to help if required.
 `rm ~/Downloads/Miniconda2-latest-Linux-x86_64.sh`
 
 ## 3a. Create an environment for IAML
-1. Update conda: `conda update conda`
+1. Update conda: `conda update conda` (at the time of writing, the latest
+  version was 4.3.25, but you should be safe to use later versions)
 1. Create the environment for the course. Call it iaml and install python 2:
 `conda create --name iaml python=2`
 
@@ -87,7 +95,11 @@ that conda installed a dependency of numpy (a python package)...python!
 
 ## 4. Install all the packages for IAML
 1. Activate the environment: `source activate iaml`
-1. {May take 5 minutes} Install all required packages: `conda install jupyter matplotlib pandas numpy scikit-learn scipy seaborn`
+1. {May take 5 minutes} Install all required packages: `conda install jupyter=1.0.0 matplotlib=2.0.2 pandas=0.20.3 numpy=1.13.1 scikit-learn=0.19.0 scipy=0.19.1 seaborn=0.8`
+  * Please note that normally we wouldn't specify the version numbers. Conda
+  automatically downloads the most recent **consistent** set of packages.
+  We specify versions here such that this course is consistent regardless of
+  when you start (/recreate your environment!)
 1. Get some space back: `conda clean -a`
 
 ### *IMPORTANT*
@@ -146,6 +158,9 @@ stored. *You will have to follow this procedure for all labs and assignments.**
 ## Troubleshooting
 
 ### I ran out of space when installing packages
+Firstly, please note that your space on DICE is allocated dynamically. If you are
+having problems it may be because you were using new space faster than it could
+be allocated to you!
 1. Check how much space you have on DICE. **You will need at least 4.5GB**.
     1. `freespace`
     1. If you don't have enough space, follow the instructions on [this page](
