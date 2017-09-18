@@ -122,10 +122,10 @@ assignments. Within your terminal:
 
 Now you have two options:
 
-1. We recommend that you directly download a .zip file from https://github.com/JamesOwers/iaml which will contain everything you need and
+1. We recommend that you directly download a .zip file from https://github.com/JamesOwers/iaml2017 which will contain everything you need and
 save it in the folder you have just created. You can do this from the terminal
 by typing:
-    * `wget https://github.com/JamesOwers/iaml/archive/master.zip`
+    * `wget https://github.com/JamesOwers/iaml2017/archive/master.zip`
     * `unzip master.zip`
 1. If **and only if** you are familiar and confident with using Git/GitHub, you
 can initialize a git directory, add the above repo as remote and pull everything
