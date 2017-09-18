@@ -96,10 +96,10 @@ that conda installed a dependency of numpy (a python package)...python!
 ## 4. Install all the packages for IAML
 1. Activate the environment: `source activate iaml`
 1. {May take 5 minutes} Install all required packages: `conda install jupyter=1.0.0 matplotlib=2.0.2 pandas=0.20.3 numpy=1.13.1 scikit-learn=0.19.0 scipy=0.19.1 seaborn=0.8`
-  * Please note that normally we wouldn't specify the version numbers. Conda
-  automatically downloads the most recent **consistent** set of packages.
-  We specify versions here such that this course is consistent regardless of
-  when you start (/recreate your environment!)
+    * Please note that normally we wouldn't specify the version numbers. Conda
+    automatically downloads the most recent **consistent** set of packages.
+    We specify versions here such that this course is consistent regardless of
+    when you start (/recreate your environment!)
 1. Get some space back: `conda clean -a`
 
 ### *IMPORTANT*
