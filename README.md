@@ -147,7 +147,7 @@ stored. *You will have to follow this procedure for all labs and assignments.**
 3. Start a jupyter notebook
     * `jupyter notebook`
 4. This should automatically open your browser
-    * Click on `01_Lab_1_Introduction.ipynb` to open it
+    * Click on `01_Lab_0_Introduction.ipynb` to open it
 
 ## Further Reading
 
