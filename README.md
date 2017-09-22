@@ -1,6 +1,29 @@
 # Introductory applied machine learning (INFR10069)
 
-# Setting up
+These instructions are written for set up on DICE / a Unix environment.
+
+**Distance learners please note**:
+We recommend two options for working remotely. We preference that you use your
+own machine:
+
+1. Use your own machine! Conda installation should work fine on your own
+computer. You must still have a DICE account: when submitting assignments, you
+will need to copy work up to DICE and submit from there. Instructions will be
+given for this in each assignment
+1. Use virtual dice - a virtual machine emulated on your own computer connected
+to the dice network. Please read here for installation instructions and more: 
+http://computing.help.inf.ed.ac.uk/vdice
+
+**Windows users please note**:
+* After conda installation, all instructions are much the same
+* please follow conda installation instructions on their
+website [here](https://conda.io/docs/user-guide/install/index.html)
+* to activate the `iaml` environment, note that you don't type `source activate iaml`
+but instead just `activate iaml`
+* you can ignore section 3b (though you can google windows equivalents of all
+  the Unix commands given)
+
+# Setting up on DICE or Unix
 
 Within this course we will be using Python along with a few open-source
 libraries (packages). We will be using a virtual environment and package
@@ -35,7 +58,10 @@ ASAP to get this space**.
     1. if you already have it installed, skip ahead to Create an Environment
 1. Download the latest version of miniconda2
     1. `cd ~/Downloads` (you can make a Downloads folder if you don't have one)
-    1. `wget https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh`
+    1. Download the installer, depending on your system (you can check links [here](https://conda.io/miniconda.html)):
+        * Linux: `wget https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh`
+        * Mac: `wget https://repo.continuum.io/miniconda/Miniconda2-latest-MacOSX-x86_64.sh` or `curl -LOk https://repo.continuum.io/miniconda/Miniconda2-latest-MacOSX-x86_64.sh`
+        * Or just simply download from [the site](https://conda.io/miniconda.html)
 1. Install miniconda2 *with default settings*
     1. `sh Miniconda2-latest-Linux-x86_64.sh`
     1. Follow the prompt - **type `yes` and hit `enter` to accept all default
@@ -139,7 +165,7 @@ this if you are happy to google your own solutions!
 Once you have downloaded the material, you are now ready to start working with
 Jupyter notebooks. First you need to activate the software environment and then
 start a Jupyter Notebook session from within the folder where the material is
-stored. *You will have to follow this procedure for all labs and assignments.**
+stored. *You will have to follow this procedure for all labs and assignments.*
 
 1. Activate the conda environment: `source activate iaml`
 2. Enter the directory where you downloaded the course material:
@@ -158,6 +184,7 @@ stored. *You will have to follow this procedure for all labs and assignments.**
 ## Troubleshooting
 
 ### I ran out of space when installing packages
+
 Firstly, please note that your space on DICE is allocated dynamically. If you are
 having problems it may be because you were using new space faster than it could
 be allocated to you!
@@ -177,3 +204,42 @@ just delete your environment and start again. Execute `conda remove --name iaml
 This is fairly extreme but as a final resort can be done quickly and easily.
 Please note that you will lose *all* your environments if you do this, so check
 this will not affect you before proceeding...[follow instructions here](https://conda.io/docs/user-guide/install/linux.html?highlight=uninstall#uninstalling-anaconda-or-miniconda)
+
+### Unzipping master.zip error
+Check that you downloaded the zip correctly! An error like:
+```
+End-of-central-directory signature not found.  Either this file is not
+  a zipfile, or it constitutes one disk of a multi-part archive.  In the
+  latter case the central directory and zipfile comment will be found on
+  the last disk(s) of this archive.
+```
+means that the file you've downloaded is likely incomplete. Try downloading from
+the [GitHub repo](https://github.com/JamesOwers/iaml2017) directly by clicking the green button and downloading the zip.
+
+### wget: command not found
+You do not have wget installed! Either install it, download from
+the [GitHub repo](https://github.com/JamesOwers/iaml2017) directly by clicking the green button and download the zip, or try using another program like curl e.g. `curl -LOk https://github.com/JamesOwers/iaml2017/archive/master.zip`
+
+### conda: command not found or 'Conda never works in new terminal'
+Unix solution: First try closing your terminal and reopening. If that doesn't fix, it's likely that, in the conda installation, you didn't allow conda to add the it's bin directory to your $PATH. Check your home directory for `~/bashrc` or `~/.bash_profile`. You should have a line in one of those files that looks like this:
+```
+# added by Miniconda2 4.3.21 installer
+export PATH="/afs/inf.ed.ac.uk/user/s12/s1234567/miniconda2/bin:$PATH"
+```
+If you don't, you can add it like this (changing the conda installation location line):
+```
+miniconda_location=/afs/inf.ed.ac.uk/user/s12/s1234567/miniconda2/bin
+echo 'export PATH=:$PATH' >>~/.bash_profile
+```
+
+### 'source' is not recognized as an internal or external command, ...
+You're on windows aren't you! Please see the note at the top of the file (you
+can omit `source`)
+
+### 'which' is not recognized as an internal or external command, ...
+You're on windows aren't you! Please see the note at the top of the file (
+`which` = `where` on windows).
+
+### $PATH?
+You're on windows aren't you! Please see the note at the top of the file (
+`echo $PATH` == `echo %PATH%` on windows).
