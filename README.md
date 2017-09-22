@@ -36,6 +36,7 @@ ASAP to get this space**.
 1. Download the latest version of miniconda2
     1. `cd ~/Downloads` (you can make a Downloads folder if you don't have one)
     1. `wget https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh`
+    1. A mac pkg can be found at `https://repo.continuum.io/archive/Anaconda2-4.4.0-MacOSX-x86_64.pkg`
 1. Install miniconda2 *with default settings*
     1. `sh Miniconda2-latest-Linux-x86_64.sh`
     1. Follow the prompt - **type `yes` and hit `enter` to accept all default
