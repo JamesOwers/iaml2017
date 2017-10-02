@@ -63,7 +63,7 @@ ASAP to get this space**.
         * Mac: `wget https://repo.continuum.io/miniconda/Miniconda2-latest-MacOSX-x86_64.sh` or `curl -LOk https://repo.continuum.io/miniconda/Miniconda2-latest-MacOSX-x86_64.sh`
         * Or just simply download from [the site](https://conda.io/miniconda.html)
 1. Install miniconda2 *with default settings*
-    1. `sh Miniconda2-latest-Linux-x86_64.sh`
+    1. `bash Miniconda2-latest-Linux-x86_64.sh`
     1. Follow the prompt - **type `yes` and hit `enter` to accept all default
     settings when asked**
 1. Close Terminal and reopen
