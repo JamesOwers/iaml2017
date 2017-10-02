@@ -11,7 +11,7 @@ computer. You must still have a DICE account: when submitting assignments, you
 will need to copy work up to DICE and submit from there. Instructions will be
 given for this in each assignment
 1. Use virtual dice - a virtual machine emulated on your own computer connected
-to the dice network. Please read here for installation instructions and more: 
+to the dice network. Please read here for installation instructions and more:
 http://computing.help.inf.ed.ac.uk/vdice
 
 **Windows users please note**:
@@ -221,7 +221,10 @@ You do not have wget installed! Either install it, download from
 the [GitHub repo](https://github.com/JamesOwers/iaml2017) directly by clicking the green button and download the zip, or try using another program like curl e.g. `curl -LOk https://github.com/JamesOwers/iaml2017/archive/master.zip`
 
 ### conda: command not found or 'Conda never works in new terminal'
-Unix solution: First try closing your terminal and reopening. If that doesn't fix, it's likely that, in the conda installation, you didn't allow conda to add the it's bin directory to your $PATH. Check your home directory for `~/bashrc` or `~/.bash_profile`. You should have a line in one of those files that looks like this:
+DICE issue: DICE has a different set of bash startup mechanism, and you may need
+to edit some different files yourself. **Do the below with ~/.benv instead**. See [here](http://computing.help.inf.ed.ac.uk/dice-bash) for more info.
+
+Unix solution: First try closing your terminal and reopening. If that doesn't fix, it's likely that, in the conda installation, you didn't allow conda to add the it's bin directory to your $PATH. Check your home directory for `~/.bashrc` or `~/.bash_profile`. You should have a line in one of those files that looks like this:
 ```
 # added by Miniconda2 4.3.21 installer
 export PATH="/afs/inf.ed.ac.uk/user/s12/s1234567/miniconda2/bin:$PATH"
