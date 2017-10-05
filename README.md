@@ -52,11 +52,13 @@ ASAP to get this space**.
     1. If you don't have enough space, follow the instructions on [this page](
         http://computing.help.inf.ed.ac.uk/afs-quotas)
 
-## 2. Install conda
-1. Check you don't already have conda installed
+## 2. If you don't have it - Install conda
+1. **Check you don't already have conda installed!**
     1. `which conda`
-    1. if you already have it installed, skip ahead to Create an Environment
-1. Download the latest version of miniconda2
+    1. **if you already have it installed, skip ahead to Create an Environment**
+    1. It doesn't matter if you have miniconda2, miniconda3, anaconda2, or
+    anaconda3 installed - they will all work for this course
+1. If you don't have conda, download the latest version of miniconda2
     1. `cd ~/Downloads` (you can make a Downloads folder if you don't have one)
     1. Download the installer, depending on your system (you can check links [here](https://conda.io/miniconda.html)):
         * Linux: `wget https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh`
@@ -246,3 +248,33 @@ You're on windows aren't you! Please see the note at the top of the file (
 ### $PATH?
 You're on windows aren't you! Please see the note at the top of the file (
 `echo $PATH` == `echo %PATH%` on windows).
+
+### I can't find my conda environment....but I definitely created it
+We have found that people also taking MLP and/or ANLP (other courses that use
+conda) have installed multiple versions of conda. To check whether you've done
+this, simply list your home directory:
+
+```{bash}
+ls ~
+```
+
+If you see multiple folders called anaconda or miniconda, e.g. anaconda3 and
+miniconda2, you have installed multiple versions of conda! Another way to check
+is to print your PATH or view your .bashrc / .benv:
+
+```
+echo $PATH
+cat ~/.bashrc
+cat ~/.benv  # if you're on DICE
+```
+
+This will show multiple conda directories.
+
+You only need to use one installation of conda, and it doens't matter whether
+you use version 2 or 3 (there is no difference that will affect this course).
+
+Simply recreate your environment(s) in one of the conda installations, and
+delete the other.
+
+- https://conda.io/docs/user-guide/tasks/manage-environments.html#sharing-an-environment
+- https://conda.io/docs/user-guide/install/linux.html#uninstalling-anaconda-or-miniconda
